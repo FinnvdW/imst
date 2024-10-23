@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Boerderij.unity
     guid: 97dfd6e0808c2954fa5e8e2d1b98939f
+  - enabled: 1
+    path: Assets/Scenes/Stad + fiets.unity
+    guid: 09eb6d8abcf989c41bb77f6be1070ed6
+  - enabled: 1
+    path: Assets/Scenes/Polder.unity
+    guid: 26d903736729fbf4b9f6573b6659f635
   m_configObjects: {}
