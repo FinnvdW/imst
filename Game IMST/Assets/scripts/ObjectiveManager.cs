@@ -1,44 +1,40 @@
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectiveManager : MonoBehaviour
+public class MissionManager : MonoBehaviour
 {
-    public List<Objective> objectives;
-    private int currentObjectiveIndex = 0;
+    public Objective[] objectives; // Array van doelstellingen
 
-    void Start()
+    private void Start()
     {
-        if (objectives.Count > 0)
+        foreach (var objective in objectives)
         {
-            Debug.Log("Objective Activated: " + objectives[currentObjectiveIndex].objectiveName);
+            objective.isCompleted = false; // Stel alle doelstellingen in als niet voltooid
         }
     }
 
-    public void OnItemCollected(string itemID)
+    public void StartMission(string missieNaam)
     {
-        if (currentObjectiveIndex < objectives.Count)
-        {
-            Objective currentObjective = objectives[currentObjectiveIndex];
-            currentObjective.CollectItem(itemID);
-
-            if (currentObjective.IsComplete())
-            {
-                currentObjective.CompleteObjective();
-                MoveToNextObjective();
-            }
-        }
+        Debug.Log("Nieuwe missie gestart: " + missieNaam);
+        // Hier kun je logica toevoegen om doelstellingen in te stellen
     }
 
-    private void MoveToNextObjective()
+    public void TriggerObjectiveCompletion(int index)
     {
-        currentObjectiveIndex++;
-        if (currentObjectiveIndex < objectives.Count)
+        if (index >= 0 && index < objectives.Length)
         {
-            Debug.Log("Objective Activated: " + objectives[currentObjectiveIndex].objectiveName);
+            objectives[index].isCompleted = true; // Markeer de objective als voltooid
+            Debug.Log("Objective " + index + " voltooid!");
         }
         else
         {
-            Debug.Log("All objectives completed!");
+            Debug.LogWarning("Objective index buiten bereik: " + index);
         }
     }
+}
+
+[System.Serializable]
+public class Objective
+{
+    public string objectiveName; // Naam van de doelstelling
+    public bool isCompleted; // Is de doelstelling voltooid?
 }
