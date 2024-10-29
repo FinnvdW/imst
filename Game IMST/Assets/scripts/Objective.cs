@@ -1,8 +1,7 @@
 using UnityEngine;
 using TMPro;
 
-[System.Serializable]
-public class Objective
+public class Objective : MonoBehaviour
 {
     public string description; // Beschrijving van het objective
     public int targetCount;    // Aantal benodigde items/acties om te voltooien
