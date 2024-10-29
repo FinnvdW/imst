@@ -9,6 +9,8 @@ public class DeurSlager : MonoBehaviour
     public AudioClip DeurOpen;
     public bool DeurIsOpen;
     public bool DeurIsDicht;
+    public MeshRenderer mesh;
+    public BoxCollider box;
 
     public AudioClip DeurDicht;
 
@@ -23,13 +25,22 @@ public class DeurSlager : MonoBehaviour
             animator.SetTrigger("openen");
             audioSource.PlayOneShot(DeurOpen);
             DeurIsOpen = true;
-        }
-        
-        if (DeurIsOpen == true){
+            GetComponent<MeshRenderer>().enabled = false;
+            GetComponent<BoxCollider>().enabled = false;
+            StartCoroutine(ColliderTerug());
+        }else{
             animator.SetTrigger("sluiten");
             audioSource.PlayOneShot(DeurDicht);
+            GetComponent<MeshRenderer>().enabled = true;
+            GetComponent<BoxCollider>().enabled = true;
             DeurIsOpen = false;
         }
+    }
+
+    IEnumerator ColliderTerug(){
+        yield return new WaitForSeconds(2f);
+        GetComponent<MeshRenderer>().enabled = true;
+        GetComponent<BoxCollider>().enabled = true;
     }
 
 }

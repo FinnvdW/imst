@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ObjectiveItem : MonoBehaviour
+/*public class ObjectiveItem : MonoBehaviour
 {
     public string itemID;  // Unieke ID voor dit item
 
@@ -16,4 +16,4 @@ public class ObjectiveItem : MonoBehaviour
             }
         }
     }
-}
+}*/

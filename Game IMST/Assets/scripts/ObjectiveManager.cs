@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectiveManager : MonoBehaviour
+/*public class ObjectiveManager : MonoBehaviour
 {
     public List<Objective> objectives;
     private int currentObjectiveIndex = 0;
@@ -41,4 +41,4 @@ public class ObjectiveManager : MonoBehaviour
             Debug.Log("All objectives completed!");
         }
     }
-}
+}*/
