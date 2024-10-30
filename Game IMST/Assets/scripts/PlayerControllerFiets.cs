@@ -2,53 +2,35 @@ using UnityEngine;
 
 public class PlayerControllerFiets : MonoBehaviour // Make sure class name matches the filename
 {
-    private AudioSource audioSource;           // Audio source to play sound
-    public AudioClip moveSound;                // Sound to play when moving
-    private Vector3 lastPosition;              // Store last position to detect movement
-    public float movementThreshold = 1f;       // Minimum distance required to start the sound
+    public AudioSource Fiets;
+    public AudioSource Adem;
+    public GameObject player;
 
-    private bool isMoving = false;             // Track if the player is considered moving
+    public bool jumpEnabled;
 
-    void Start()
-    {
-        // Add an AudioSource component if one isn't already attached
-        audioSource = gameObject.AddComponent<AudioSource>();
-        audioSource.clip = moveSound;          // Assign sound to AudioSource
-        audioSource.loop = true;               // Enable looping for continuous playback while moving
+    Rigidbody rb;
 
-        // Initialize last position
-        lastPosition = transform.position;
+    void Start(){
+        rb = GetComponent<Rigidbody>();
     }
 
     void Update()
     {
-        // Calculate the distance moved since the last frame
-        float distanceMoved = Vector3.Distance(transform.position, lastPosition);
 
-        // Check if the movement threshold is met and set isMoving accordingly
-        if (distanceMoved >= movementThreshold)
-        {
-            isMoving = true;
-        }
-        else if (distanceMoved < movementThreshold)
-        {
-            isMoving = false;
-        }
 
-        // Start playing the audio if moving, and stop if not
-        if (isMoving)
+        if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
-            if (!audioSource.isPlaying)
-            {
-                audioSource.Play();
-            }
+            Fiets.enabled = true;
+            Adem.enabled = true;
         }
         else
         {
-            audioSource.Stop();
+            Fiets.enabled = false;
+            Adem.enabled = false;
         }
+    }
 
-        // Update last position for the next frame
-        lastPosition = transform.position;
+    bool isGrounded() {
+      return Physics.Raycast(transform.position, -Vector3.up, 0.1f + transform.localScale.y);
     }
 }
