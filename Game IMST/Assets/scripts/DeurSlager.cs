@@ -8,10 +8,6 @@ public class DeurSlager : MonoBehaviour
     AudioSource audioSource;
     public AudioClip DeurOpen;
     public bool DeurIsOpen;
-    public bool DeurIsDicht;
-    public MeshRenderer mesh;
-    public BoxCollider box;
-
     public AudioClip DeurDicht;
 
     void Start(){
