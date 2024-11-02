@@ -1,78 +1,75 @@
-/*using UnityEngine;
+using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
 
 public class ObjectiveManager : MonoBehaviour
 {
-    public TextMeshProUGUI objectiveText; // Assign in the Inspector to your TextMeshPro UI element
-    private Objective[] objectives;       // Array to store all objectives
+    public TextMeshProUGUI objectiveText; // Text UI to display current objective
+    public Objective[] objectives;         // Predefined ordered list of objectives
+    public string[] objectiveDescription;  // Array to store objective descriptions
+    
+    private int currentObjectiveIndex = 0; // Tracks the current objective to display
 
     void Start()
     {
-        // Find all Objective components in the scene
-        objectives = FindObjectsOfType<Objective>();
+        // Validate the objective array
         if (objectives == null || objectives.Length == 0)
         {
-            Debug.LogWarning("No objectives found in the scene.");
+            Debug.LogWarning("No objectives assigned in the ObjectiveManager.");
+            return;
+        }
+        
+        // Validate the descriptions array
+        if (objectiveDescription == null || objectiveDescription.Length == 0)
+        {
+            Debug.LogWarning("No descriptions assigned in the ObjectiveManager.");
+            return;
         }
 
-        // Check if objectiveText is assigned
-        if (objectiveText == null)
+        // Validate that the count of objectives matches the count of descriptions
+        if (objectives.Length != objectiveDescription.Length)
         {
-            Debug.LogError("Objective TextMeshPro UI is not assigned in the ObjectiveManager!");
-            return; // Exit if objectiveText is null to prevent further errors
+            Debug.LogError("Mismatch between number of objectives and descriptions. Ensure each objective has a description.");
+            return;
         }
 
-        UpdateObjectiveUI();
-    }
-
-    void Update()
-    {
-        // Update only if objectiveText is assigned
-        if (objectiveText != null)
+        // Register event listeners for each objective
+        foreach (Objective objective in objectives)
         {
-            if (AreAllObjectivesComplete())
+            if (objective != null) // Check for null references
             {
-                Debug.Log("All objectives completed!");
-                objectiveText.text = "All objectives completed!";
+                objective.OnObjectiveCompleted += OnObjectiveCompleted;
             }
             else
             {
-                UpdateObjectiveUI();
+                Debug.LogWarning("An objective in the array is null.");
             }
+        }
+
+        UpdateObjectiveUI(); // Display the first objective
+    }
+
+    void OnObjectiveCompleted()
+    {
+        // Move to the next objective if available
+        currentObjectiveIndex++;
+        if (currentObjectiveIndex < objectives.Length)
+        {
+            UpdateObjectiveUI();
+        }
+        else
+        {
+            // All objectives are complete
+            objectiveText.text = "All objectives completed!";
+            Debug.Log("All objectives completed!");
         }
     }
 
     void UpdateObjectiveUI()
     {
-        // Check if objectiveText is null before updating text
-        if (objectiveText == null) return;
+        // Display only the current objective description from the array
+        if (objectiveText == null) return; // Ensure objectiveText is assigned
+        if (currentObjectiveIndex < 0 || currentObjectiveIndex >= objectiveDescription.Length) return; // Valid range check
 
-        // Reset objectiveText display
-        objectiveText.text = "Objectives:\n";
-        
-        // Loop through objectives, adding each to the display
-        foreach (Objective objective in objectives)
-        {
-            if (objective != null) // Prevents null reference if an objective is missing
-            {
-                // Show [X] if completed, [ ] if incomplete
-                objectiveText.text += (objective.isCompleted ? "[X] " : "[ ] ") + objective.objectiveDescription + "\n";
-            }
-            else
-            {
-                Debug.LogWarning("Objective list contains a null reference.");
-            }
-        }
+        objectiveText.text = "Objective:\n" + objectiveDescription[currentObjectiveIndex];
     }
-
-    bool AreAllObjectivesComplete()
-    {
-        foreach (Objective objective in objectives)
-        {
-            if (objective != null && !objective.isCompleted)
-                return false;
-        }
-        return true;
-    }
-}*/
+}
