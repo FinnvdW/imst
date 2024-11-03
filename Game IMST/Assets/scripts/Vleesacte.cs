@@ -15,24 +15,27 @@ public class Vleesacte : MonoBehaviour
         // Check if AudioSource is attached to prevent runtime errors
         if (audioSource == null)
         {
-            Debug.LogError("AudioSource component is missing on " + gameObject.name);
+            Debug.LogError($"AudioSource component is missing on {gameObject.name}. Please add one.");
         }
     }
 
     public void Lezen()
     {
-        // Check if both audioSource and BriefGeluid are assigned before playing the audio
-        if (audioSource != null && BriefGeluid != null)
+        // Ensure audioSource and BriefGeluid are assigned before playing the audio
+        if (audioSource != null)
         {
-            audioSource.PlayOneShot(BriefGeluid);
+            if (BriefGeluid != null)
+            {
+                audioSource.PlayOneShot(BriefGeluid);
+            }
+            else
+            {
+                Debug.LogWarning("BriefGeluid AudioClip is not assigned in the Inspector!");
+            }
         }
         else
         {
-            if (BriefGeluid == null)
-                Debug.LogWarning("BriefGeluid AudioClip is not assigned in the Inspector!");
-
-            if (audioSource == null)
-                Debug.LogWarning("AudioSource component is missing on this GameObject!");
+            Debug.LogWarning("AudioSource component is missing on this GameObject!");
         }
 
         // Display the image
@@ -47,7 +50,7 @@ public class Vleesacte : MonoBehaviour
         }
     }
 
-    IEnumerator Imageweg()
+    private IEnumerator Imageweg()
     {
         yield return new WaitForSeconds(10);
         if (image != null)
