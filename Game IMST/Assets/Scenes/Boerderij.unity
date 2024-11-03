@@ -2243,10 +2243,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.6013591
+  m_Radius: 0.5276299
   m_Height: 2.1879642
   m_Direction: 1
-  m_Center: {x: 0.00000009536743, y: -0.013092694, z: -0.071106575}
+  m_Center: {x: 0.00000009536743, y: -0.013092694, z: 0.0026225566}
 --- !u!23 &1329991812
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2323,7 +2323,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 48cb356ad7d80a84cb6b3c116f3b0ed6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 710bcb9d42c845749894799b93dd2f50, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
