@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class NaarStadBoer : MonoBehaviour
 {
-    void OnTriggerEnter(){
+    public void NaarStadGaan(){
         SceneManager.LoadScene("stad", LoadSceneMode.Single);
     }
 }
