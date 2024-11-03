@@ -14,15 +14,15 @@ public class Vleesacte : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
     }
-        public void Lezen(){
-            audioSource.PlayOneShot(BriefGeluid);
+    public void Vlees(){
+        audioSource.PlayOneShot(BriefGeluid);
 
-            image.enabled = true;
+        image.enabled = true;
 
-            StartCoroutine(Imageweg());
-        }
-        IEnumerator Imageweg(){
-            yield return new WaitForSeconds(10);
-            image.enabled = false;
-        }
+        StartCoroutine(Imageweg());
+    }
+    IEnumerator Imageweg(){
+        yield return new WaitForSeconds(10);
+        image.enabled = false;
+    }
 }
