@@ -10,6 +10,7 @@ public class worst : MonoBehaviour
     }
 
     public void Oppakken(){
-    gameObject.SetActive(false);
+    GetComponent<MeshRenderer>().enabled = false;
+    GetComponent<BoxCollider>().enabled = false;
     }
 }

@@ -3,7 +3,7 @@ using UnityEngine;
 public class CollectionObjective : MonoBehaviour
 {
     public Objective objective; // Link to the Objective script
-    public int requiredItems = 5;
+    public int requiredItems = 1;
     private int collectedItems = 0;
 
     public void CollectItem()
