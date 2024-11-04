@@ -753,11 +753,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daa0df976e8dfba4a8d91c315455d6f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectiveText: {fileID: 0}
+  objectiveText: {fileID: 313164361}
   objectives:
   - {fileID: 0}
   objectiveDescription:
-  - 
+  - Go to the Farmer to make a deal
 --- !u!4 &243302998
 Transform:
   m_ObjectHideFlags: 0
@@ -1622,7 +1622,7 @@ GameObject:
   - component: {fileID: 1055706106}
   - component: {fileID: 1055706105}
   m_Layer: 0
-  m_Name: player
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2804,7 +2804,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 1422054183}
   - {fileID: 1012133909}
-  - {fileID: 243302998}
   - {fileID: 1055706111}
   - {fileID: 1058423531}
   - {fileID: 1352247435}
@@ -2822,3 +2821,4 @@ SceneRoots:
   - {fileID: 1496085875}
   - {fileID: 145792242}
   - {fileID: 1522400460}
+  - {fileID: 243302998}

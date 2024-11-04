@@ -59,7 +59,7 @@ public class ObjectiveManager : MonoBehaviour
         else
         {
             // All objectives are complete
-            objectiveText.text = "All objectives completed!";
+            objectiveText.text = " ";
             Debug.Log("All objectives completed!");
         }
     }

@@ -12,14 +12,16 @@ public class Objective : MonoBehaviour
     // Call this method when the objective is completed
     public void CompleteObjective()
     {
+        // Only complete if not already completed
         if (!isCompleted)
         {
             isCompleted = true;
             Debug.Log(objectiveDescription + " completed!");
-            OnObjectiveCompleted?.Invoke(); // Trigger event
+            
+            // Invoke the event to notify listeners
+            OnObjectiveCompleted?.Invoke();
         }
     }
 }
-
 
 
