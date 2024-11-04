@@ -1612,14 +1612,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 38d087cd7a35fd247b25905f7a1034e7, type: 3}
   m_PrefabInstance: {fileID: 570959139}
   m_PrefabAsset: {fileID: 0}
---- !u!33 &269329811
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 269329809}
-  m_Mesh: {fileID: 0}
 --- !u!23 &269329812
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1677,12 +1669,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4.3087263, y: 6.4357715, z: 10.973462}
-  m_Center: {x: -0.0000010430813, y: 2.7178838, z: 4.0886455}
+  m_Size: {x: 4.311356, y: 6.066999, z: 10.889586}
+  m_Center: {x: 0.0013102591, y: 2.9954956, z: 4.0467076}
 --- !u!114 &269329814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1695,6 +1687,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c75da80f9f0ebce458b361414e2a03cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &269329816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269329809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d85db511145e9ca408e1623a4813a060, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectName: 
+  cursor: {fileID: 21300000, guid: 837f1deb1a8fa374a9a9bf2682758f2f, type: 3}
+  interactFunction:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &295004185
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4962,7 +4971,7 @@ PrefabInstance:
       addedObject: {fileID: 269329812}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 38d087cd7a35fd247b25905f7a1034e7, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 269329811}
+      addedObject: {fileID: 269329816}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 38d087cd7a35fd247b25905f7a1034e7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 269329814}
