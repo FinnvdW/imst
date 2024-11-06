@@ -1,13 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Fietssleutel : MonoBehaviour
 {
-    AudioSource audioSource;  // Corrected to AudioSource
-    public AudioClip Sleuteloppakgeluidje;  // Ensure this matches in both declaration and use
+    AudioSource audioSource;
+    public AudioClip Sleuteloppakgeluidje;
     public Speler speler;
-    
+    public ObjectiveManager objectiveManager;  // Reference to ObjectiveManager
+
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -15,8 +14,19 @@ public class Fietssleutel : MonoBehaviour
 
     public void Oppakken()
     {
-        audioSource.PlayOneShot(Sleuteloppakgeluidje);  // Corrected variable name here
+        // Play pickup sound and hide the key
+        audioSource.PlayOneShot(Sleuteloppakgeluidje);
         speler.HeeftFietsSleutel = true;
         gameObject.SetActive(false);
+
+        // Notify ObjectiveManager that the objective is completed
+        if (objectiveManager != null)
+        {
+            objectiveManager.OnObjectiveCompleted();
+        }
+        else
+        {
+            Debug.LogWarning("ObjectiveManager reference not set in Fietssleutel.");
+        }
     }
 }
