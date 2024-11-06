@@ -33,7 +33,7 @@ public class BriefVader : MonoBehaviour
 
     IEnumerator Imageweg()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(5);
         image.enabled = false;
     }
 }

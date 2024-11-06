@@ -7,24 +7,29 @@ public class Kassa : MonoBehaviour
     Animator animator;
     bool isOpen;
 
+    AudioSource audioSource;  // Reference to AudioSource
+    public AudioClip KassaGeluid;  // Audio clip for the cash register sound
 
-    AudioSource audioSource;  // Corrected to AudioSource
-    public AudioClip KassaGeluid;  // Ensure this matches in both declaration and use
-    
     void Start()
     {
-      animator = GetComponent<Animator>();
-      isOpen = false;
+        animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();  // Assign the AudioSource component
+        isOpen = false;
     }
 
-    public void Openen ()
+    public void Openen()
     {
-        if(isOpen == false){
-        animator.SetTrigger("open");
-        isOpen = true;
-        } else {
-             animator.SetTrigger("dicht");
-             isOpen = false;
+        if (isOpen == false)
+        {
+            animator.SetTrigger("open");
+            audioSource.PlayOneShot(KassaGeluid);  // Play sound when opening
+            isOpen = true;
+        }
+        else
+        {
+            animator.SetTrigger("dicht");
+            audioSource.PlayOneShot(KassaGeluid);  // Play sound when closing
+            isOpen = false;
         }
     }
 }

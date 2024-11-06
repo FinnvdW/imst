@@ -52,7 +52,7 @@ public class Vleesacte : MonoBehaviour
 
     private IEnumerator Imageweg()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(6);
         if (image != null)
         {
             image.enabled = false;
