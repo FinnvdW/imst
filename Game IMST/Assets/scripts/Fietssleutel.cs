@@ -6,6 +6,7 @@ public class Fietssleutel : MonoBehaviour
 {
     AudioSource audioSource;  // Corrected to AudioSource
     public AudioClip Sleuteloppakgeluidje;  // Ensure this matches in both declaration and use
+    public Speler speler;
     
     void Start()
     {
@@ -15,7 +16,7 @@ public class Fietssleutel : MonoBehaviour
     public void Oppakken()
     {
         audioSource.PlayOneShot(Sleuteloppakgeluidje);  // Corrected variable name here
-        GetComponent<MeshRenderer>().enabled = false;
-        GetComponent<BoxCollider>().enabled = false;
+        speler.HeeftFietsSleutel = true;
+        gameObject.SetActive(false);
     }
 }
