@@ -36,7 +36,7 @@ ModelImporter:
       name: talking
       takeName: mixamo.com
       internalID: -203655887218126122
-      firstFrame: 30
+      firstFrame: 35
       lastFrame: 363
       wrapMode: 0
       orientationOffsetY: 0
@@ -66,15 +66,15 @@ ModelImporter:
       takeName: mixamo.com
       internalID: -4469183485442372851
       firstFrame: 0
-      lastFrame: 30
+      lastFrame: 34
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
+      loopTime: 1
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
