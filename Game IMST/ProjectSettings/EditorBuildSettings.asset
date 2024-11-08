@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Polder + Fiets.unity
     guid: 26d903736729fbf4b9f6573b6659f635
+  - enabled: 1
+    path: Assets/Scenes/Polder no fiets.unity
+    guid: a59811da4b4a3824091508103e19ac77
   m_configObjects: {}
