@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: ce7d994970c2a2143bd6f0d4fd177272, type: 2}
-  m_LightingSettings: {fileID: 4890085278179872738, guid: d798532611cfe3e449ed8eb69a811c04, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 8e9633f86e7584c44928f4f81a38bffc, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -10337,6 +10337,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 882129737928793925, guid: e1a399f0afac5244396935124238f3a8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 45c6e2c5823e7ee4a8edea5debc5d0e7, type: 2}
     - target: {fileID: 919132149155446097, guid: e1a399f0afac5244396935124238f3a8, type: 3}
       propertyPath: m_Name
       value: poldergrond1
@@ -12462,6 +12466,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 882129737928793925, guid: e1a399f0afac5244396935124238f3a8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 45c6e2c5823e7ee4a8edea5debc5d0e7, type: 2}
     - target: {fileID: 919132149155446097, guid: e1a399f0afac5244396935124238f3a8, type: 3}
       propertyPath: m_Name
       value: poldergrond1 (1)
@@ -15632,6 +15640,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 882129737928793925, guid: e1a399f0afac5244396935124238f3a8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 45c6e2c5823e7ee4a8edea5debc5d0e7, type: 2}
     - target: {fileID: 919132149155446097, guid: e1a399f0afac5244396935124238f3a8, type: 3}
       propertyPath: m_Name
       value: poldergrond1 (2)
@@ -16378,6 +16390,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 882129737928793925, guid: 7616c6ab61acc024a8487f7ec3a97ee7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 45c6e2c5823e7ee4a8edea5debc5d0e7, type: 2}
     - target: {fileID: 919132149155446097, guid: 7616c6ab61acc024a8487f7ec3a97ee7, type: 3}
       propertyPath: m_Name
       value: poldergrond
@@ -21269,6 +21285,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: kas ondergrond
       objectReference: {fileID: 0}
+    - target: {fileID: 7339356831882890532, guid: abf16e3e395675c46b2cba6f451f7596, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 45c6e2c5823e7ee4a8edea5debc5d0e7, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -31008,6 +31028,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 882129737928793925, guid: e1a399f0afac5244396935124238f3a8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 45c6e2c5823e7ee4a8edea5debc5d0e7, type: 2}
     - target: {fileID: 919132149155446097, guid: e1a399f0afac5244396935124238f3a8, type: 3}
       propertyPath: m_Name
       value: poldergrond1 (3)
