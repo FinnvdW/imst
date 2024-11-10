@@ -34,6 +34,6 @@ public class pratenBoer : MonoBehaviour
     public void Converseren(){
         animator.SetTrigger("praten");
         GetComponent<MeshRenderer>().enabled = false;
-        GetComponent<CapsuleCollider>().enabled = false;
+        GetComponent<BoxCollider>().enabled = false;
     }
 }

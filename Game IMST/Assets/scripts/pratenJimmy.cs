@@ -9,7 +9,10 @@ public class pratenJimmy : MonoBehaviour
     Animator animator;
     Image image;
     AudioSource audioSource;
-    public AudioClip Convo;
+    public AudioClip JimmyYap;
+    public AudioClip GordonYap;
+    public AudioClip JimmyYap2;
+    public AudioClip GordonYap2;
     public TextMeshProUGUI GordonTalking;
     public TextMeshProUGUI GordonTalking1;
     public TextMeshProUGUI GordonTalking2;
@@ -35,7 +38,7 @@ public class pratenJimmy : MonoBehaviour
         animator.SetTrigger("praten");
         GetComponent<MeshRenderer>().enabled = false;
         GetComponent<CapsuleCollider>().enabled = false;
-        audioSource.PlayOneShot(Convo);
+        audioSource.PlayOneShot(JimmyYap);
         JimmyTalking.text = "Hi Gordon! How are you today?";
         JimmyTalking.enabled = true;
         StartCoroutine(Tekstweg());
@@ -65,6 +68,7 @@ public class pratenJimmy : MonoBehaviour
 
     IEnumerator GordonYapping(){
         yield return new WaitForSeconds(3.1f);
+        audioSource.PlayOneShot(GordonYap);
         GordonTalking.enabled = true;
         Gordon.enabled = true;
         yield return new WaitForSeconds(3.5f);
@@ -74,6 +78,7 @@ public class pratenJimmy : MonoBehaviour
 
     IEnumerator Tekstweg2(){
         yield return new WaitForSeconds(6.7f);
+        audioSource.PlayOneShot(JimmyYap2);
         JimmyTalking1.enabled = true;
         Jimmy.enabled = true;
         yield return new WaitForSeconds(4.5f);
@@ -83,6 +88,7 @@ public class pratenJimmy : MonoBehaviour
 
     IEnumerator GordonYapping2(){
         yield return new WaitForSeconds(11.3f);
+        audioSource.PlayOneShot(GordonYap2);
         GordonTalking1.enabled = true;
         Gordon.enabled = true;
         yield return new WaitForSeconds(5f);
@@ -92,6 +98,7 @@ public class pratenJimmy : MonoBehaviour
 
     IEnumerator Tekstweg3(){
         yield return new WaitForSeconds(16.4f);
+        audioSource.PlayOneShot(JimmyYap2);
         JimmyTalking2.enabled = true;
         Jimmy.enabled = true;
         yield return new WaitForSeconds(4.5f);
@@ -101,6 +108,7 @@ public class pratenJimmy : MonoBehaviour
 
     IEnumerator GordonYapping3(){
         yield return new WaitForSeconds(21f);
+        audioSource.PlayOneShot(GordonYap2);
         GordonTalking2.enabled = true;
         Gordon.enabled = true;
         yield return new WaitForSeconds(4.5f);
