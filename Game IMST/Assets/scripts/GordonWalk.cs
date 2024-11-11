@@ -1,19 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 public class GordonWalk : MonoBehaviour
 {
     public Animator animator;
+    Rigidbody rb;
+    public Speler speler;
     void Start()
     {
         animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody>();
     }
 
-    public void Walking()
+    void Update()
     {
-        if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)){
+        if (speler.IsWalking == true)
+        {
             animator.SetTrigger("walking");
+        }else if (speler.IsWalking == false){
+            animator.SetTrigger("notwalking");
         }
     }
 }
