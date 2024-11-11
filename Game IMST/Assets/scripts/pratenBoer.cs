@@ -77,23 +77,23 @@ public class pratenBoer : MonoBehaviour
         audioSource.PlayOneShot(GordonYap);
         GordonTalking.enabled = true;
         Gordon.enabled = true;
-        yield return new WaitForSeconds(3.5f);
+        yield return new WaitForSeconds(4.5f);
         GordonTalking.enabled = false;
         Gordon.enabled = false;
     }
 
     IEnumerator Tekstweg2(){
-        yield return new WaitForSeconds(6.7f);
+        yield return new WaitForSeconds(7.7f);
         audioSource.PlayOneShot(BoerYap2);
         BoerTalking1.enabled = true;
         Boer.enabled = true;
-        yield return new WaitForSeconds(4.5f);
+        yield return new WaitForSeconds(5f);
         BoerTalking1.enabled = false;
         Boer.enabled = false;
     }
 
     IEnumerator GordonYapping2(){
-        yield return new WaitForSeconds(11.3f);
+        yield return new WaitForSeconds(12.8f);
         audioSource.PlayOneShot(GordonYap2);
         GordonTalking1.enabled = true;
         Gordon.enabled = true;
@@ -103,27 +103,27 @@ public class pratenBoer : MonoBehaviour
     }
 
     IEnumerator Tekstweg3(){
-        yield return new WaitForSeconds(16.4f);
+        yield return new WaitForSeconds(17.9f);
         audioSource.PlayOneShot(BoerYap3);
         BoerTalking2.enabled = true;
         Boer.enabled = true;
-        yield return new WaitForSeconds(4.5f);
+        yield return new WaitForSeconds(5f);
         BoerTalking2.enabled = false;
         Boer.enabled = false;
     }
 
     IEnumerator GordonYapping3(){
-        yield return new WaitForSeconds(21f);
-        audioSource.PlayOneShot(GordonYap2);
+        yield return new WaitForSeconds(22.9f);
+        audioSource.PlayOneShot(GordonYap);
         GordonTalking2.enabled = true;
         Gordon.enabled = true;
-        yield return new WaitForSeconds(4.5f);
+        yield return new WaitForSeconds(3f);
         GordonTalking2.enabled = false;
         Gordon.enabled = false;
     }
 
     IEnumerator Tekstweg4(){
-        yield return new WaitForSeconds(25.5f);
+        yield return new WaitForSeconds(25.9f);
         audioSource.PlayOneShot(BoerYap4);
         BoerTalking3.enabled = true;
         Boer.enabled = true;
