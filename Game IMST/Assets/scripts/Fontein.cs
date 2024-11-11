@@ -5,9 +5,9 @@ using UnityEngine;
 public class Fontein : MonoBehaviour
 {
     
-AudioSource audioSource;
+    AudioSource audioSource;
 
-public AudioClip fontein;
+    public AudioClip fontein;
 
     void Start()
     {
