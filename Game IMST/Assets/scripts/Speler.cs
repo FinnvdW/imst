@@ -5,4 +5,5 @@ using UnityEngine;
 public class Speler : MonoBehaviour
 {
     public bool HeeftFietsSleutel = false;
+    public bool IsWalking = false;
 }

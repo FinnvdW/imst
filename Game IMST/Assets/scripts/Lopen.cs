@@ -6,6 +6,7 @@ public class Lopen : MonoBehaviour
 {
     public AudioSource Walk;
     public GameObject player;
+    public Speler speler;
 
     public bool jumpEnabled;
 
@@ -22,10 +23,12 @@ public class Lopen : MonoBehaviour
         if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
             Walk.enabled = true;
+            speler.IsWalking = true;
         }
         else
         {
             Walk.enabled = false;
+            speler.IsWalking = false;
         }
     }
 
