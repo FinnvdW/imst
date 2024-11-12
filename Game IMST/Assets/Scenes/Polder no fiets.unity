@@ -4952,7 +4952,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -649.00006, y: 277}
+  m_AnchoredPosition: {x: -649.00006, y: 260}
   m_SizeDelta: {x: 6, y: 6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &254894180
@@ -38604,6 +38604,56 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.544908, y: 3.4374185, z: 5.483634}
   m_Center: {x: -1.0456847, y: 2.3922803, z: -0.030092051}
+--- !u!1 &2049192490
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2049192492}
+  - component: {fileID: 2049192491}
+  m_Layer: 0
+  m_Name: ObjectiveManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2049192491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049192490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daa0df976e8dfba4a8d91c315455d6f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectiveImage: {fileID: 254894180}
+  objectiveText: {fileID: 489855489}
+  objectives:
+  - {fileID: 0}
+  objectiveDescription:
+  - Go to the community Greenhouse and gather some vegetables
+--- !u!4 &2049192492
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049192490}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 100.65, y: 6.66, z: -11.7}
+  m_LocalScale: {x: 5, y: 5.7, z: 5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2056917249 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5a7f15b75480dc64f9db194b065ad81f, type: 3}
@@ -40323,6 +40373,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1440036265}
+  - {fileID: 2049192492}
   - {fileID: 105586159}
   - {fileID: 1545791926}
   - {fileID: 1976394260}

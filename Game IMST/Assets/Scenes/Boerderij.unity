@@ -14943,6 +14943,52 @@ PrefabInstance:
       addedObject: {fileID: 761369488}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11e301eac7a812f4d8e7f20f6c5f3b4a, type: 3}
+--- !u!1 &837555199
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 837555201}
+  - component: {fileID: 837555200}
+  m_Layer: 0
+  m_Name: Collecobjective
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &837555200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837555199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07ae5e99c8081b2468d4de2693573057, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objective: {fileID: 1210111562}
+  requiredItems: 1
+--- !u!4 &837555201
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837555199}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 99.83, y: 6.12, z: -10.19}
+  m_LocalScale: {x: 4, y: 4.7, z: 4}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &837811581
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15566,7 +15612,7 @@ MonoBehaviour:
   objectiveImage: {fileID: 1300570900}
   objectiveText: {fileID: 1452355666}
   objectives:
-  - {fileID: 0}
+  - {fileID: 1210111562}
   - {fileID: 485291619}
   objectiveDescription:
   - Go to the Farmer to make a deal
@@ -22072,6 +22118,9 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d948ec112f3b7394db41636e85b6b628, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1210111562}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d948ec112f3b7394db41636e85b6b628, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1210111558}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d948ec112f3b7394db41636e85b6b628, type: 3}
       insertIndex: -1
@@ -22333,6 +22382,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 8.940989, y: 8.758917, z: 10.654877}
   m_Center: {x: -0.12005997, y: 3.8794584, z: 0.24147034}
+--- !u!114 &1210111562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210111552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 205a1aa7a2da2d14bb8639fba39fe49c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectiveDescription: Go to the Farmer to make a deal
+  isCompleted: 0
 --- !u!1001 &1216408526
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23912,7 +23975,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -649.00006, y: 277}
+  m_AnchoredPosition: {x: -649.00006, y: 253}
   m_SizeDelta: {x: 6, y: 6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1300570900
@@ -27104,7 +27167,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -78.38279, y: -10.450562, z: -258.72473, w: -108.20774}
+  m_margin: {x: -78.38279, y: 17.05745, z: -258.72473, w: -108.20774}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -39865,6 +39928,7 @@ SceneRoots:
   - {fileID: 873028757}
   - {fileID: 485291622}
   - {fileID: 278291382}
+  - {fileID: 837555201}
   - {fileID: 415863976}
   - {fileID: 356716641}
   - {fileID: 2011456649}
