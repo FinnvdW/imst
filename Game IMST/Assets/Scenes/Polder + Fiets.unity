@@ -4724,7 +4724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daa0df976e8dfba4a8d91c315455d6f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectiveText: {fileID: 0}
+  objectiveText: {fileID: 1227012085}
   objectives:
   - {fileID: 1942446386}
   objectiveDescription:
@@ -23303,7 +23303,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227012083}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
@@ -35534,7 +35534,7 @@ Transform:
   m_GameObject: {fileID: 1942446383}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 88.1, y: 17, z: 184.9}
+  m_LocalPosition: {x: 88.1, y: 17, z: 252.5}
   m_LocalScale: {x: 7, y: 8, z: 7}
   m_ConstrainProportionsScale: 0
   m_Children: []
