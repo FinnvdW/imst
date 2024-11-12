@@ -1,9 +1,11 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;  // Include this for working with UI Image components
 
 public class ObjectiveManager : MonoBehaviour
 {
-    public TextMeshProUGUI objectiveText; // Text UI to display current objective
+    public Image objectiveImage;           // The Image UI element (background)
+    public TextMeshProUGUI objectiveText;  // TextMeshProUGUI inside the image
     public Objective[] objectives;         // Predefined ordered list of objectives
     public string[] objectiveDescription;  // Array to store objective descriptions
 
@@ -41,6 +43,7 @@ public class ObjectiveManager : MonoBehaviour
             }
         }
 
+        // Set the initial state
         UpdateObjectiveUI(); // Display the first objective
     }
 
@@ -63,9 +66,20 @@ public class ObjectiveManager : MonoBehaviour
 
     void UpdateObjectiveUI()
     {
-        if (objectiveText == null) return;
+        if (objectiveText == null || objectiveImage == null) return;
         if (currentObjectiveIndex < 0 || currentObjectiveIndex >= objectiveDescription.Length) return;
 
+        // Make the image and text visible
+        objectiveImage.gameObject.SetActive(true);
         objectiveText.text = "Objective:\n" + objectiveDescription[currentObjectiveIndex];
+    }
+
+    // Optionally, you can hide the image if all objectives are completed
+    public void HideObjectiveUI()
+    {
+        if (objectiveImage != null)
+        {
+            objectiveImage.gameObject.SetActive(false);
+        }
     }
 }
