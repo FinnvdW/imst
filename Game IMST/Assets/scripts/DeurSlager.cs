@@ -14,9 +14,13 @@ public class DeurSlager : MonoBehaviour
     void Start(){
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
-        DeurIsOpen = false;
+        DeurIsOpen = true;
+        DeurOpenenen();
     }
-
+    
+    void DeurOpenenen(){
+        StartCoroutine(DeurOpenen());
+    }
     public void OpenDeur(){
         if (DeurIsOpen == false){
             animator.SetTrigger("openen");
@@ -38,6 +42,11 @@ public class DeurSlager : MonoBehaviour
         yield return new WaitForSeconds(2f);
         GetComponent<MeshRenderer>().enabled = true;
         GetComponent<BoxCollider>().enabled = true;
+    }
+
+    IEnumerator DeurOpenen(){
+        yield return new WaitForSeconds(0.1f);
+        animator.SetTrigger("openen");
     }
 
 }
