@@ -6,6 +6,6 @@ using UnityEngine.SceneManagement;
 public class NaarStadBoer : MonoBehaviour
 {
     public void NaarStadGaan(){
-        SceneManager.LoadScene("stad", LoadSceneMode.Single);
+        SceneManager.LoadScene("Scene Stad na Boer", LoadSceneMode.Single);
     }
 }

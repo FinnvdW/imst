@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Polder no fiets.unity
     guid: a59811da4b4a3824091508103e19ac77
+  - enabled: 1
+    path: Assets/Scenes/Stad na Polder met groente.unity
+    guid: 20c56b93cc6c2964a8b8644393e27056
+  - enabled: 1
+    path: Assets/Scenes/Scene Stad na Boer.unity
+    guid: 4afc41cb51debe14997c47ec32f80d5d
   m_configObjects: {}
