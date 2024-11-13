@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Laatste Scene.unity
     guid: 83f2993062be4d840938c665ee599b8f
+  - enabled: 1
+    path: Assets/Scenes/Eindscherm.unity
+    guid: b5daccc608b131e499253c0c31b979e0
   m_configObjects: {}
