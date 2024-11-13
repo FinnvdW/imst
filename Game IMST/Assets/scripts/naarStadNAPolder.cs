@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class naarStadNAPolder : MonoBehaviour
 {
-    public void NaarStadGaan(){
+    void OnTriggerEnter(){
         SceneManager.LoadScene("Stad na Polder met groente", LoadSceneMode.Single);
     }
 }
