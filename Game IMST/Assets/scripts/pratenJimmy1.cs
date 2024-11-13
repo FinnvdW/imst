@@ -22,6 +22,7 @@ public class pratenJimmy1 : MonoBehaviour
     public TextMeshProUGUI JimmyTalking2;
     public Image Jimmy;
     public Image Gordon;
+    public Image Objective;
 
     void Start(){
         animator = GetComponent<Animator>();
@@ -36,6 +37,7 @@ public class pratenJimmy1 : MonoBehaviour
     }
 
     public void Converseren(){
+        Objective.enabled = false;
         animator.SetTrigger("praten");
         GetComponent<MeshRenderer>().enabled = false;
         GetComponent<CapsuleCollider>().enabled = false;
