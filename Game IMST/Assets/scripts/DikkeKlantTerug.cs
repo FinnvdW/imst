@@ -58,13 +58,11 @@ public class DikkeKlantTerug : MonoBehaviour
         StartCoroutine(ImageWeg());
         KlantTalking.text = "Thanks for notifying me about the new stock! I think I'll get...";
         StartCoroutine(KlantYapping());
-        KlantTalking2.text = "";
+        KlantTalking2.text = "Wait, this meat is green! I will not buy this! Maybe I will try that Labo meat instead!";
         StartCoroutine(KlantYapping3());
-        GordonTalking1.text = "Alright, I'll get it for you. How's the wife been?";
+        GordonTalking1.text = "Wow, damn sorry. Knew I shouldn't have tried to sell that...";
         StartCoroutine(GordonYapping2());
-        KlantTalking1.text = "To be honest, she is still slightly ill, but I am sure she will be fine in no time.";
-        StartCoroutine(KlantYapping2());
-        GordonTalking2.text = "Aha, well, I'm sure she will be.";
+        GordonTalking2.text = "Time for me to visit this hyped 'Labo meat' I guess.";
         StartCoroutine(GordonYapping3());
     }
     void Update(){
@@ -89,35 +87,33 @@ public class DikkeKlantTerug : MonoBehaviour
     }
 
     IEnumerator Tekstweg(){
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(3f);
         GordonTalking.enabled = false;
     }
 
     IEnumerator ImageWeg(){
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(3f);
         Gordon.enabled = false;
     }
 
     IEnumerator KlantYapping(){
-        yield return new WaitForSeconds(4.1f);
+        yield return new WaitForSeconds(3.1f);
         audioSource.PlayOneShot(KlantYap);
         KlantTalking.enabled = true;
         Klant.enabled = true;
         yield return new WaitForSeconds(4f);
         KlantTalking.enabled = false;
-        Klant.enabled = false;
     }
     IEnumerator KlantYapping3(){
-        yield return new WaitForSeconds(11.3f);
+        yield return new WaitForSeconds(7.2f);
         audioSource.PlayOneShot(KlantYap2);
         KlantTalking1.enabled = true;
-        Klant.enabled = true;
         yield return new WaitForSeconds(5f);
         KlantTalking1.enabled = false;
         Klant.enabled = false;
     }
     IEnumerator GordonYapping2(){
-        yield return new WaitForSeconds(8.2f);
+        yield return new WaitForSeconds(12.3f);
         audioSource.PlayOneShot(GordonYap);
         GordonTalking1.enabled = true;
         Gordon.enabled = true;
@@ -127,7 +123,7 @@ public class DikkeKlantTerug : MonoBehaviour
     }
 
     IEnumerator KlantYapping2(){
-        yield return new WaitForSeconds(11.3f);
+        yield return new WaitForSeconds(14.4f);
         audioSource.PlayOneShot(KlantYap2);
         KlantTalking1.enabled = true;
         Klant.enabled = true;
@@ -137,7 +133,7 @@ public class DikkeKlantTerug : MonoBehaviour
     }
 
     IEnumerator GordonYapping3(){
-        yield return new WaitForSeconds(16.4f);
+        yield return new WaitForSeconds(15.4f);
         audioSource.PlayOneShot(GordonYap);
         GordonTalking2.enabled = true;
         Gordon.enabled = true;

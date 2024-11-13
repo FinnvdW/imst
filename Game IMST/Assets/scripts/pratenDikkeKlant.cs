@@ -72,7 +72,7 @@ public class pratenDikkeKlant : MonoBehaviour
     void Update(){
         if (speler.WorstVerkocht == true){
         Invoke("RotateObject", 8f);
-        GordonTalking.text = "Here you go, that's my last of my finest meat.";
+        GordonTalking.text = "Here you go, that's the last of my finest meat.";
         StartCoroutine(GordonYapping5());
         KlantTalking.text = "Much appreciated as always, Gordon! I will return when you have some new stock.";
         StartCoroutine(KlantYapping3());

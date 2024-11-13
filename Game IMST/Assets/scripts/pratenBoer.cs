@@ -43,7 +43,7 @@ public class pratenBoer : MonoBehaviour
         GetComponent<MeshRenderer>().enabled = false;
         GetComponent<BoxCollider>().enabled = false;
         audioSource.PlayOneShot(BoerYap);
-        BoerTalking.text = "Gordon? I didn't expect to see you here! What can i do for ya?";
+        BoerTalking.text = "Gordon? I didn't expect to see you here! What can I do for ya?";
         BoerTalking.enabled = true;
         StartCoroutine(Tekstweg());
         Boer.enabled = true;
