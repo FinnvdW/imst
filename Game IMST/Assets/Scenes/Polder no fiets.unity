@@ -2017,10 +2017,10 @@ RectTransform:
   - {fileID: 218663199}
   - {fileID: 1986701128}
   - {fileID: 254894179}
-  - {fileID: 1885743647}
   - {fileID: 489855488}
-  - {fileID: 2039497022}
+  - {fileID: 1885743647}
   - {fileID: 566557133}
+  - {fileID: 2039497022}
   - {fileID: 1450666463}
   - {fileID: 143497570}
   - {fileID: 600799354}
@@ -3741,6 +3741,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ce6d1ac992f655645932f092ba9eb523, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1903107673}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ce6d1ac992f655645932f092ba9eb523, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1903107669}
@@ -8414,7 +8417,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 489855487}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
@@ -8490,7 +8493,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -78.982185, y: -39.7416, z: -233.4643, w: -93.30303}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -22053,6 +22056,67 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.06657337, y: 0.02291471, z: 0.10445925}
   m_Center: {x: 0.02384836, y: -0.00036350134, z: 0.05349029}
+--- !u!1 &1277924428
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1277924430}
+  - component: {fileID: 1277924429}
+  - component: {fileID: 1277924431}
+  m_Layer: 5
+  m_Name: ObjectiveCollection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1277924429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277924428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07ae5e99c8081b2468d4de2693573057, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objective: {fileID: 1545791935}
+  requiredItems: 1
+--- !u!4 &1277924430
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277924428}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 100.65, y: 6.66, z: -11.7}
+  m_LocalScale: {x: 5, y: 5.7, z: 5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1277924431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277924428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07ae5e99c8081b2468d4de2693573057, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objective: {fileID: 1903107673}
+  requiredItems: 1
 --- !u!4 &1283648013 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4fd8cb39bc33e774784d842fb0613902, type: 3}
@@ -25261,7 +25325,7 @@ GameObject:
   - component: {fileID: 1440036256}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25280,6 +25344,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HeeftFietsSleutel: 0
   IsWalking: 0
+  WorstVerkocht: 0
+  heeftGepraat: 0
 --- !u!114 &1440036257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28024,10 +28090,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dig And Plant Seeds
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 08464aa62d112634683b5dbdab3dad67, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 08464aa62d112634683b5dbdab3dad67, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1545791935}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 08464aa62d112634683b5dbdab3dad67, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1545791937}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 08464aa62d112634683b5dbdab3dad67, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1545791933}
@@ -28279,6 +28355,34 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.4268394, y: 6.103763, z: 2.8110356}
   m_Center: {x: 0.00000007947286, y: 2.5518816, z: -0.5762328}
+--- !u!114 &1545791935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545791927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 205a1aa7a2da2d14bb8639fba39fe49c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectiveDescription: Go to the community greenhouse and talk to the lady
+  isCompleted: 0
+--- !u!114 &1545791937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545791927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07ae5e99c8081b2468d4de2693573057, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objective: {fileID: 1545791935}
+  requiredItems: 1
 --- !u!1001 &1546733409
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35499,6 +35603,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1903107673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208971493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 205a1aa7a2da2d14bb8639fba39fe49c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectiveDescription: Go to the Farmer to make a deal
+  isCompleted: 0
 --- !u!1001 &1903192796
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38636,9 +38754,11 @@ MonoBehaviour:
   objectiveImage: {fileID: 254894180}
   objectiveText: {fileID: 489855489}
   objectives:
-  - {fileID: 0}
+  - {fileID: 1545791935}
+  - {fileID: 1903107673}
   objectiveDescription:
-  - Go to the community Greenhouse and gather some vegetables
+  - Go to the community greenhouse and talk to the lady
+  - Gather some carrots and tomatoes
 --- !u!4 &2049192492
 Transform:
   m_ObjectHideFlags: 0
@@ -40372,8 +40492,9 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1440036265}
   - {fileID: 2049192492}
+  - {fileID: 1277924430}
+  - {fileID: 1440036265}
   - {fileID: 105586159}
   - {fileID: 1545791926}
   - {fileID: 1976394260}

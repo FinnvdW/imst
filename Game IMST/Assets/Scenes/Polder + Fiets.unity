@@ -9589,8 +9589,8 @@ RectTransform:
   - {fileID: 1197949926}
   - {fileID: 660199431}
   - {fileID: 393383569}
-  - {fileID: 1227012084}
   - {fileID: 2065807623}
+  - {fileID: 1227012084}
   - {fileID: 1142200666}
   - {fileID: 589457192}
   - {fileID: 1310656074}
@@ -23265,7 +23265,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -59.551773, y: -27.075157, z: -233.42636, w: -95.15233}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

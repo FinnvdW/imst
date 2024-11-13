@@ -1,6 +1,6 @@
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;  // Include this for working with UI Image components
+using UnityEngine.UI;
 
 public class ObjectiveManager : MonoBehaviour
 {
@@ -13,6 +13,7 @@ public class ObjectiveManager : MonoBehaviour
 
     void Start()
     {
+        // Check for issues with missing or mismatched references
         if (objectives == null || objectives.Length == 0)
         {
             Debug.LogWarning("No objectives assigned in the ObjectiveManager.");
@@ -31,11 +32,12 @@ public class ObjectiveManager : MonoBehaviour
             return;
         }
 
+        // Subscribe to the OnObjectiveCompleted event for each objective
         foreach (Objective objective in objectives)
         {
             if (objective != null)
             {
-                objective.OnObjectiveCompleted += OnObjectiveCompleted;
+                objective.OnObjectiveCompleted += OnObjectiveCompleted;  // Subscribe to event
             }
             else
             {
@@ -47,34 +49,49 @@ public class ObjectiveManager : MonoBehaviour
         UpdateObjectiveUI(); // Display the first objective
     }
 
-    // Make this method public so it can be accessed from other scripts
+    // This method is called when an objective is completed
     public void OnObjectiveCompleted()
     {
+        Debug.Log("Objective completed! Moving to next...");
+
         // Move to the next objective if available
         currentObjectiveIndex++;
         if (currentObjectiveIndex < objectives.Length)
         {
-            UpdateObjectiveUI();
+            UpdateObjectiveUI();  // Update UI to show the next objective
         }
         else
         {
-            // All objectives are complete
+            // If all objectives are complete, hide the UI and log completion
             objectiveText.text = " ";
             Debug.Log("All objectives completed!");
         }
     }
 
+    // Update the UI to show the current objective
     void UpdateObjectiveUI()
     {
-        if (objectiveText == null || objectiveImage == null) return;
-        if (currentObjectiveIndex < 0 || currentObjectiveIndex >= objectiveDescription.Length) return;
+        if (objectiveText == null || objectiveImage == null)
+        {
+            Debug.LogError("ObjectiveText or ObjectiveImage is not assigned in the Inspector.");
+            return;
+        }
+
+        if (currentObjectiveIndex < 0 || currentObjectiveIndex >= objectiveDescription.Length)
+        {
+            Debug.LogError("Current objective index is out of bounds.");
+            return;
+        }
+
+        // Debugging log for UI update
+        Debug.Log("Updating UI to show objective: " + objectiveDescription[currentObjectiveIndex]);
 
         // Make the image and text visible
         objectiveImage.gameObject.SetActive(true);
         objectiveText.text = "Objective:\n" + objectiveDescription[currentObjectiveIndex];
     }
 
-    // Optionally, you can hide the image if all objectives are completed
+    // Optionally, hide the objective UI when all objectives are completed
     public void HideObjectiveUI()
     {
         if (objectiveImage != null)
@@ -83,3 +100,4 @@ public class ObjectiveManager : MonoBehaviour
         }
     }
 }
+
