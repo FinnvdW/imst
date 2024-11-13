@@ -3743,6 +3743,9 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ce6d1ac992f655645932f092ba9eb523, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1903107675}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ce6d1ac992f655645932f092ba9eb523, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1903107673}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ce6d1ac992f655645932f092ba9eb523, type: 3}
       insertIndex: -1
@@ -22086,7 +22089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07ae5e99c8081b2468d4de2693573057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objective: {fileID: 1545791935}
+  objective: {fileID: 0}
   requiredItems: 1
 --- !u!4 &1277924430
 Transform:
@@ -25346,6 +25349,7 @@ MonoBehaviour:
   IsWalking: 0
   WorstVerkocht: 0
   heeftGepraat: 0
+  heeftVleesOpgehangen: 0
 --- !u!114 &1440036257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28100,19 +28104,19 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 08464aa62d112634683b5dbdab3dad67, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1545791935}
+      addedObject: {fileID: 1545791938}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 08464aa62d112634683b5dbdab3dad67, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1545791937}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 08464aa62d112634683b5dbdab3dad67, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1545791931}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 08464aa62d112634683b5dbdab3dad67, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1545791933}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 08464aa62d112634683b5dbdab3dad67, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1545791932}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 08464aa62d112634683b5dbdab3dad67, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1545791931}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 08464aa62d112634683b5dbdab3dad67, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1545791930}
@@ -28313,6 +28317,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1545791937}
+        m_TargetAssemblyTypeName: NEWobjective, Assembly-CSharp
+        m_MethodName: CompleteObjective
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &1545791932
 Animator:
   serializedVersion: 5
@@ -28349,13 +28365,29 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 2.4268394, y: 6.103763, z: 2.8110356}
   m_Center: {x: 0.00000007947286, y: 2.5518816, z: -0.5762328}
---- !u!114 &1545791935
+--- !u!114 &1545791937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545791927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee1fc6dae8787644fb3aa4b4e193c19b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectiveDescription: Go to the community greenhouse and talk to the lady
+  isCompleted: 0
+  completionDelay: 0
+  objectiveManager: {fileID: 2049192491}
+--- !u!114 &1545791938
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -28369,20 +28401,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectiveDescription: Go to the community greenhouse and talk to the lady
   isCompleted: 0
---- !u!114 &1545791937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1545791927}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07ae5e99c8081b2468d4de2693573057, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objective: {fileID: 1545791935}
-  requiredItems: 1
 --- !u!1001 &1546733409
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35603,6 +35621,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1903107675}
+        m_TargetAssemblyTypeName: NEWobjective, Assembly-CSharp
+        m_MethodName: CompleteObjective
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1903107673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35617,6 +35647,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectiveDescription: Go to the Farmer to make a deal
   isCompleted: 0
+--- !u!114 &1903107675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208971493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee1fc6dae8787644fb3aa4b4e193c19b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectiveDescription: Go to the Farmer to make a deal
+  isCompleted: 0
+  completionDelay: 0
+  objectiveManager: {fileID: 2049192491}
 --- !u!1001 &1903192796
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38754,11 +38800,13 @@ MonoBehaviour:
   objectiveImage: {fileID: 254894180}
   objectiveText: {fileID: 489855489}
   objectives:
-  - {fileID: 1545791935}
+  - {fileID: 1545791938}
   - {fileID: 1903107673}
+  - {fileID: 0}
   objectiveDescription:
-  - Go to the community greenhouse and talk to the lady
+  - Go to the community Greenhouse and talk to the lady there
   - Gather some carrots and tomatoes
+  - Go back to the Butchery
 --- !u!4 &2049192492
 Transform:
   m_ObjectHideFlags: 0
