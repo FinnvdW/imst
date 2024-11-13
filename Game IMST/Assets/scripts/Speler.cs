@@ -8,4 +8,5 @@ public class Speler : MonoBehaviour
     public bool IsWalking = false;
     public bool WorstVerkocht = false;
     public bool heeftGepraat = false;
+    public bool heeftVleesOpgehangen = false;
 }
