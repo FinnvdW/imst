@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene Stad na Boer.unity
     guid: 4afc41cb51debe14997c47ec32f80d5d
+  - enabled: 1
+    path: Assets/Scenes/Laatste Scene.unity
+    guid: 83f2993062be4d840938c665ee599b8f
   m_configObjects: {}
