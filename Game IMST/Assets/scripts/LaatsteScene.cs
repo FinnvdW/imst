@@ -29,7 +29,7 @@ public class LaatsteScene : MonoBehaviour
             Gordon.enabled = true;
             StartCoroutine(ImageWeg());
             StartCoroutine(EvenWachten());
-            SceneManager.LoadScene("LaatsteScene", LoadSceneMode.Single);
+            SceneManager.LoadScene("Laatste Scene", LoadSceneMode.Single);
         }
     }
 
