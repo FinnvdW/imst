@@ -7,6 +7,6 @@ public class Eindscene : MonoBehaviour
     public void OnClick()
     {
         // Load the "MainMenu" scene asynchronously
-        SceneManager.LoadSceneAsync("MainMenu");
+        SceneManager.LoadSceneAsync("Main Menu");
     }
 }
