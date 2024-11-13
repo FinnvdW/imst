@@ -31,11 +31,11 @@ public class MaakBurgers : MonoBehaviour
             Gordon.enabled = true;
             StartCoroutine(ImageWeg());
             StartCoroutine(EvenWachten());
-            SceneManager.LoadScene("LaatsteScene", LoadSceneMode.Single);
         }
     }
     IEnumerator EvenWachten(){
         yield return new WaitForSeconds(3.1f);
+        SceneManager.LoadScene("Laatste Scene", LoadSceneMode.Single);
     }
 
     IEnumerator Tekstweg(){
