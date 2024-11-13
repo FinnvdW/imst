@@ -24,6 +24,8 @@ public class pratenBoer : MonoBehaviour
     public TextMeshProUGUI BoerTalking3;
     public Image Boer;
     public Image Gordon;
+    public Image Inventory;
+    public Image Meat;
 
     void Start(){
         animator = GetComponent<Animator>();
@@ -36,6 +38,8 @@ public class pratenBoer : MonoBehaviour
         BoerTalking2.enabled = false;
         BoerTalking3.enabled = false;
         Gordon.enabled = false;
+        Meat.enabled = false;
+        Inventory.enabled = false;
     }
 
     public void Converseren(){
@@ -130,5 +134,7 @@ public class pratenBoer : MonoBehaviour
         yield return new WaitForSeconds(4.5f);
         BoerTalking3.enabled = false;
         Boer.enabled = false;
+        Inventory.enabled = true;
+        Meat.enabled = true;
     }
 }
