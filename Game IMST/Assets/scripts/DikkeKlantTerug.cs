@@ -51,13 +51,15 @@ public class DikkeKlantTerug : MonoBehaviour
         GetComponent<MeshRenderer>().enabled = false;
         GetComponent<BoxCollider>().enabled = false;
         audioSource.PlayOneShot(GordonYap);
-        GordonTalking.text = "Welcome, what can I get for you today?";
+        GordonTalking.text = "Welcome back, what can I get for you my friend?";
         GordonTalking.enabled = true;
         StartCoroutine(Tekstweg());
         Gordon.enabled = true;
         StartCoroutine(ImageWeg());
-        KlantTalking.text = "Oh wow, it seems like you're almost sold oud Gordon! I'll take everything you have left.";
+        KlantTalking.text = "Thanks for notifying me about the new stock! I think I'll get...";
         StartCoroutine(KlantYapping());
+        KlantTalking2.text = "";
+        StartCoroutine(KlantYapping3());
         GordonTalking1.text = "Alright, I'll get it for you. How's the wife been?";
         StartCoroutine(GordonYapping2());
         KlantTalking1.text = "To be honest, she is still slightly ill, but I am sure she will be fine in no time.";
@@ -103,6 +105,15 @@ public class DikkeKlantTerug : MonoBehaviour
         Klant.enabled = true;
         yield return new WaitForSeconds(4f);
         KlantTalking.enabled = false;
+        Klant.enabled = false;
+    }
+    IEnumerator KlantYapping3(){
+        yield return new WaitForSeconds(11.3f);
+        audioSource.PlayOneShot(KlantYap2);
+        KlantTalking1.enabled = true;
+        Klant.enabled = true;
+        yield return new WaitForSeconds(5f);
+        KlantTalking1.enabled = false;
         Klant.enabled = false;
     }
     IEnumerator GordonYapping2(){
