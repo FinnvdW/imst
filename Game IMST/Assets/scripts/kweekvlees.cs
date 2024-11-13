@@ -23,11 +23,6 @@ public class Kweekvlees : MonoBehaviour
         // Hide the object (make it disappear)
         gameObject.SetActive(false);
 
-        // Notify the objective manager that the objective is complete
-        if (objectiveManager != null)
-        {
-            objectiveManager.OnObjectiveCompleted(); // Progresses to the next objective
-        }
     }
 }
 
