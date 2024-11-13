@@ -10,4 +10,5 @@ public class Speler : MonoBehaviour
     public bool heeftGepraat = false;
     public bool heeftVleesOpgehangen = false;
     public bool burgersMaken = false;
+    public bool worstjeGegeten = false;
 }
